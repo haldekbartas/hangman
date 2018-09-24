@@ -8,3 +8,12 @@ body {
   margin: 0 auto;
   text-align: center;
 }
+
+.letter-list-container{
+  display:flex;
+}
+.alpha-letter-container{
+  margin:0 auto;
+  border-bottom: 1px solid black;
+
+}

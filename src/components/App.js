@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import Hangman from './Hangman'
+import Hangman from './Hangman';
 import Word from './Word';
+import Alphabet from './Alphabet';
 
 class App extends Component {
   render() {
@@ -9,6 +10,7 @@ class App extends Component {
         <h1>Hello there</h1>
         <Hangman></Hangman>
         <Word></Word>
+        <Alphabet></Alphabet>
       </div>
     );
   }
