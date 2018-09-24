@@ -1,8 +1,10 @@
 import React from 'react'
 
-function AlphaLetter({ letter }) {
+
+
+function AlphaLetter({ letter, onClick }) {
     return (
-        <div className="alpha-letter-container">
+        <div onClick={(e) => onClick(e,{letter})} className="alpha-letter-container">
             {letter}
         </div>
     )

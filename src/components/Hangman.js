@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
 
 class Hangman extends Component{
-    state = {
-        fails: 3,
-    }
     render(){
+        const { fails } = this.props;
         return(
             <div className="hangman">
-                <p>Number of fails: {this.state.fails}</p>
+                <p>Number of fails: {fails}</p>
             </div>
         )
     }
