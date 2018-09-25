@@ -1,30 +1,88 @@
+@import url('https://fonts.googleapis.com/css?family=Rock+Salt');
+
+
+
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: 'Rock Salt';
 }
 
 .App{
+  height:100vh;
   margin: 0 auto;
   text-align: center;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+.hero{
+  height: 100vh;
+}
+.hangman-logo{
+  margin-top: 5%;
+  width: 75vw;
+}
+.play-button{
+  margin-top: 10%;
+  font-size: 40px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none;
+    color:black;
+}
+.play-button:hover{
+  font-size: 43px;
+}
+
+.game{
+  height:100vh;
+}
+
+.hangman{
+  margin-top:3vh;
+  height:30vh;
+}
+
+
+.word-letter-list-container{
+  height:20vh;
+  margin-top: 5vh;
+  font-size: 20px;
+  display:flex;
+  max-width: 80%;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: flex-end;
+}
+.word-letter-container{
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  
+  margin: 0 10px;
+  border-bottom: 1px solid black;
 }
 
 .letter-list-container{
   display:flex;
+  margin: auto;
+  margin-top:5vh;
+  height: 40vh;
+  flex-wrap: wrap;
+  justify-content: center;
+
 }
 .alpha-letter-container{
-  margin:0 auto;
-  border-bottom: 1px solid black;
+  background: white;
+  border: 0;
+  font-size: 24px;
+  width: 10%;
+  font-family: 'Rock Salt';
 }
-
-.word-letter-list-container{
-  display:flex;
-  width: 30%;
-  margin: 0 auto;
-}
-.word-letter-container{
-  flex: 1;
-  margin: 5px;
-  padding: 10px;
-  border: 1px solid black;
+.alpha-letter-container:active{
+  outline: none;
 }
