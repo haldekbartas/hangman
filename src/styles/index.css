@@ -15,5 +15,16 @@ body {
 .alpha-letter-container{
   margin:0 auto;
   border-bottom: 1px solid black;
+}
 
+.word-letter-list-container{
+  display:flex;
+  width: 30%;
+  margin: 0 auto;
+}
+.word-letter-container{
+  flex: 1;
+  margin: 5px;
+  padding: 10px;
+  border: 1px solid black;
 }
