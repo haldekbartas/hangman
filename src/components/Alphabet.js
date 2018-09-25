@@ -11,13 +11,11 @@ class Alphabet extends Component {
 
     handleClick = (event, letter) => {
         event.persist();
-        event.target.style.display = "none";
-        this.props.onLetterPicked(letter.letter)
-        this.props.onFail(letter.letter);
+        event.target.disabled = true;
+        this.props.checkLetter(letter.letter);
     }
 
     render() {
-        const { pickedLetters } = this.props;
         const letterList = this.alphabet.map((letter, index) => {
             return (
                 <AlphaLetter letter={letter} key={index} onClick={this.handleClick}></AlphaLetter>
@@ -27,8 +25,6 @@ class Alphabet extends Component {
 
         return (
             <div className="alphabet">
-                <h1>Alphabet:</h1>
-                <div>picked letters: {pickedLetters}</div>
                 <div className="letter-list-container">
                     {letterList}
                 </div>

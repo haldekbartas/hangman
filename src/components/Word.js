@@ -7,36 +7,35 @@ class Word extends Component {
         this.state = {
 
         };
-
-        this.fails = [];
+        this.correctLetters = [];
     }
 
-    onFail = (letter) => {
-        if (this.props.pickedLetters.includes(letter)) {
 
-        }
-        else {
-            console.log(letter.letter);
-        }
+    componentWillMount = () =>{
+        this.props.setCorrectLetters(this.correctLetters);
     }
 
     render() {
         const { splittedWord, pickedLetters } = this.props;
 
         const wordLetterList = splittedWord.map((letter, index) => {
+                if(splittedWord.includes(letter)){
+                    if(!this.correctLetters.includes(letter)){
+                        this.correctLetters.push(letter);
+                    }
+                }
             if (pickedLetters.includes(letter)) {
                 return <WordLetter key={index} letter={letter} ></WordLetter>
             }
             else {
                 return <WordLetter key={index} letter=" " ></WordLetter>
             }
-        });
 
+        });
 
 
         return (
             <div className="word" >
-                <h1>WORD:</h1>
                 <div className="word-letter-list-container">
                     {wordLetterList}
                 </div>
