@@ -9,7 +9,7 @@ body {
 }
 
 .App{
-  height:100vh;
+  min-height:100vh;
   margin: 0 auto;
   text-align: center;
   overflow-y: scroll;
@@ -43,15 +43,21 @@ a:hover, a:visited, a:link, a:active
 }
 
 .hangman{
-  margin-top:3vh;
   height:30vh;
+  padding-top:5vh;
+}
+.hangmanSvg{
+  height:30vh;
+}
+.fails{
+  height:5vh;
+  font-size:18px;
 }
 
 
 .word-letter-list-container{
   height:20vh;
-  margin-top: 5vh;
-  font-size: 20px;
+  font-size: 24px;
   display:flex;
   max-width: 80%;
   margin: 0 auto;
@@ -70,7 +76,6 @@ a:hover, a:visited, a:link, a:active
 .letter-list-container{
   display:flex;
   margin: auto;
-  margin-top:5vh;
   height: 40vh;
   flex-wrap: wrap;
   justify-content: center;
@@ -86,3 +91,83 @@ a:hover, a:visited, a:link, a:active
 .alpha-letter-container:active{
   outline: none;
 }
+
+@media (max-width: 899px) {
+  .App{
+    max-height: 100vh;
+  }
+  .hero{
+    height:30vh;
+  }
+  .game{
+    height:70vh;
+  }
+  .hangman-logo{
+    height:30vh;
+  }
+  .hangman{
+    padding:0;
+    height:10vh;
+  }
+  .fails{
+    font-size:22px;
+  }
+  .word{
+    height:10vh;
+  }
+  .word-letter-list-container{
+    height:10vh;
+  }
+  .hangmanSvg{
+    display:none;
+  }
+  .play-button{
+  display:none;
+  }
+
+  .letter-list-container{
+    padding-top:10vh;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1200px) {
+  .App{
+    max-height: 100vh;
+  }
+  .hero{
+    height:30vh;
+  }
+  .game{
+    height:70vh;
+  }
+  .hangman-logo{
+    height:30vh;
+    margin:0;
+  }
+  .hangman{
+    padding:0;
+    height:10vh;
+  }
+  .fails{
+    font-size:22px;
+  }
+  .word{
+    height:10vh;
+  }
+  .word-letter-list-container{
+    height:10vh;
+  }
+  .hangmanSvg{
+    display:none;
+  }
+  .play-button{
+  display:none;
+  }
+
+  .letter-list-container{
+    padding-top:10vh;
+  }
+}
+
+
+
