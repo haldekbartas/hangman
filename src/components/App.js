@@ -5,6 +5,7 @@ import hangmanSvg from '../assets/hangman.svg'
 import hangmanLogo from '../assets/hangman-logo.svg'
 import Hangman from './Hangman';
 import randomWords from 'random-words'
+import smoothscroll from 'smoothscroll'
 
 class App extends Component {
   constructor(props) {
@@ -94,7 +95,6 @@ class App extends Component {
           </div>
           <div className="game" id="game">
             <Hangman failsLeft={this.state.failsLeft}></Hangman>
-            {/* <img className="hangman" src={hangmanSvg} alt="hangman logo" /> */}
             <Word setCorrectLetters={this.setCorrectLetters} splittedWord={this.state.splittedWord} pickedLetters={this.state.pickedLetters}></Word>
             <Alphabet checkWin={this.checkWin} checkLose={this.checkLose} checkLetter={this.checkLetter} pickedLetters={this.state.pickedLetters}></Alphabet>
 

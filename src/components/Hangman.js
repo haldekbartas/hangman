@@ -11,9 +11,9 @@ class Word extends Component {
         const { failsLeft } = this.props;
 
         return (
-            <div className="hangmanClas" >
-                   <img className="hangman" src={hangmanSvg} alt="hangman logo" />
-                   <div> Fails left: {failsLeft}    </div>
+            <div className="hangman" >
+                   <img className="hangmanSvg" src={hangmanSvg} alt="hangman logo" />
+                   <div className="fails"> Fails left: {failsLeft}    </div>
             </div>
         )
     }
