@@ -4,10 +4,6 @@ import hangmanSvg from '../assets/hangman.svg'
 class Word extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-
-        };
-
     }
 
 
@@ -16,8 +12,8 @@ class Word extends Component {
 
         return (
             <div className="hangmanClas" >
-                   Fails left: {failsLeft}
                    <img className="hangman" src={hangmanSvg} alt="hangman logo" />
+                   <div> Fails left: {failsLeft}    </div>
             </div>
         )
     }

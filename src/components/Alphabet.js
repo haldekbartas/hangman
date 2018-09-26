@@ -3,9 +3,7 @@ import AlphaLetter from './AlphaLetter'
 class Alphabet extends Component {
     constructor(props) {
         super(props);
-        this.state = {
 
-        };
         this.alphabet = new Array(26).fill(1).map((_, i) => String.fromCharCode(65 + i));
     }
 

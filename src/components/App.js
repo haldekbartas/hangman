@@ -4,22 +4,19 @@ import Alphabet from './Alphabet';
 import hangmanSvg from '../assets/hangman.svg'
 import hangmanLogo from '../assets/hangman-logo.svg'
 import Hangman from './Hangman';
+import randomWords from 'random-words'
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.myRef = React.createRef();
     this.state = {
-      // word: wordFunction().split(''),
-      word: 'apple',
-      splittedWord: ['A', 'P', 'P', 'L', 'E'],
+      splittedWord: randomWords().toUpperCase().split(''),
       pickedLetters: [],
-      fails: 0,
-      failsLeft: 5,
-      correctCount: 0,
       correctLetters: [],
-      failed: false,
-      win: false,
+      failsLeft: 10,
+      correctCount: 0,
+      win: undefined,
     };
   }
 
@@ -32,12 +29,18 @@ class App extends Component {
       prevState.correctCount++
     }
     else {
-      prevState.fails++
       prevState.failsLeft--
     }
 
-    prevState.failed = prevState.fails === 5
-    prevState.win = prevState.correctLetters.length === prevState.correctCount
+    if(prevState.failsLeft === 0){
+      prevState.win = false;
+    }
+    else if (prevState.correctLetters.length === prevState.correctCount){
+      prevState.win = true;
+    }
+    else{
+      prevState.win = undefined;
+    }
 
     this.setState(prevState)
   }
@@ -51,10 +54,10 @@ class App extends Component {
 
   playAgain = () => {
     this.setState({
+      splittedWord: randomWords().toUpperCase().split(''),
       pickedLetters: [],
-      win: false,
-      failed: false,
-      fails: 0,
+      win: undefined,
+      failsLeft: 10,
       correctCount: 0
     })
   }
@@ -66,16 +69,18 @@ class App extends Component {
           <h1>
             You won the jackpot on lottery called life.
                     </h1>
+            <h2>Word '{this.state.splittedWord}'' bringed you good luck.</h2>
           <div className="play-button" onClick={this.playAgain}><a href="#game"> Another ticket?</a></div>
         </div>
       )
     }
-    else if (this.state.failed) {
+    else if (this.state.win == false) {
       return (
         <div className="App">
           <h1>
             Sorry. You hanged.
-                     </h1>
+          </h1>
+          <h2>Word '{this.state.splittedWord}'' was your executor.</h2>
           <div className="play-button" onClick={this.playAgain}><a href="#game">Die again?</a></div>
         </div>
       )

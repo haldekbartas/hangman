@@ -4,9 +4,6 @@ import WordLetter from './WordLetter';
 class Word extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-
-        };
         this.correctLetters = [];
     }
 
