@@ -23,6 +23,9 @@ body {
   margin-top: 5%;
   width: 75vw;
 }
+.game-end{
+  padding-top:10vh;
+}
 .play-button{
   margin-top: 10%;
   font-size: 40px;
@@ -30,12 +33,19 @@ body {
   transition: 0.5s;
   font-family: 'Rock Salt'
 }
+.reset-button{
+  margin-top: 10%;
+  font-size: 40px;
+  cursor: pointer;
+  transition: 0.5s;
+  font-family: 'Pangolin'
+}
 a:hover, a:visited, a:link, a:active
 {
     text-decoration: none;
     color:black;
 }
-.play-button:hover{
+.play-button:hover, .reset-button:hover{
   font-size: 43px;
 }
 
@@ -94,6 +104,7 @@ a:hover, a:visited, a:link, a:active
 }
 
 @media (max-width: 899px) {
+  
   .App{
     max-height: 100vh;
   }
@@ -102,6 +113,9 @@ a:hover, a:visited, a:link, a:active
   }
   .game{
     height:70vh;
+  }
+  .game-end{
+    padding-top:30vh;
   }
   .hangman-logo{
     height:30vh;

@@ -67,22 +67,26 @@ class App extends Component {
     if (this.state.win) {
       return (
         <div className="App">
+          <div className="game-end">
           <h1>
             You won the jackpot on lottery called life.
                     </h1>
             <h2>Word '{this.state.splittedWord}'' bringed you good luck.</h2>
-          <div className="play-button" onClick={this.playAgain}><a href="#game"> Another ticket?</a></div>
+          <div className="reset-button" onClick={this.playAgain}><a href="#game"> Another ticket?</a></div>
+          </div>
         </div>
       )
     }
     else if (this.state.win == false) {
       return (
         <div className="App">
+        <div className="game-end">
           <h1>
             Sorry. You hanged.
           </h1>
-          <h2>Word '{this.state.splittedWord}'' was your executor.</h2>
-          <div className="play-button" onClick={this.playAgain}><a href="#game">Die again?</a></div>
+          <h1>Word '{this.state.splittedWord}'' was your executor.</h1>
+          <div className="reset-button" onClick={this.playAgain}><a href="#game">Die again?</a></div>
+          </div>
         </div>
       )
     }
@@ -91,7 +95,7 @@ class App extends Component {
         <div className="App" ref={this.myRef}>
           <div className="hero">
             <img className="hangman-logo" src={hangmanLogo} alt="hangman logo" />
-            <div className="play-button"><a href="#game">Play it cool.</a></div>
+            <div className="reset-button"><a href="#game">Play it cool.</a></div>
           </div>
           <div className="game" id="game">
             <Hangman failsLeft={this.state.failsLeft}></Hangman>
