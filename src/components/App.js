@@ -95,7 +95,7 @@ class App extends Component {
         <div className="App" ref={this.myRef}>
           <div className="hero">
             <img className="hangman-logo" src={hangmanLogo} alt="hangman logo" />
-            <div className="reset-button"><a href="#game">Play it cool.</a></div>
+            <div className="play-button"><a href="#game">Play it cool.</a></div>
           </div>
           <div className="game" id="game">
             <Hangman failsLeft={this.state.failsLeft}></Hangman>
