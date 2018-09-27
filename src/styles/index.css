@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css?family=Pangolin');
 
 
-
 body {
   margin: 0;
   padding: 0;
@@ -29,6 +28,7 @@ body {
   font-size: 40px;
   cursor: pointer;
   transition: 0.5s;
+  font-family: 'Rock Salt'
 }
 a:hover, a:visited, a:link, a:active
 {
