@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Rock+Salt');
+@import url('https://fonts.googleapis.com/css?family=Pangolin');
 
 
 
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Rock Salt';
+  font-family: 'Pangolin';
 }
 
 .App{
@@ -51,7 +52,7 @@ a:hover, a:visited, a:link, a:active
 }
 .fails{
   height:5vh;
-  font-size:18px;
+  font-size:22px;
 }
 
 
@@ -86,7 +87,7 @@ a:hover, a:visited, a:link, a:active
   border: 0;
   font-size: 24px;
   width: 10%;
-  font-family: 'Rock Salt';
+  font-family: 'Pangolin';
 }
 .alpha-letter-container:active{
   outline: none;
